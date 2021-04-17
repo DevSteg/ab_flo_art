@@ -1,0 +1,10 @@
+.top-header {
+    background: url(../img/bg_img_top.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 40vh;
+}
+
+.main-logo {
+    width: 100%;
+    margin-top: 90px;
+}
