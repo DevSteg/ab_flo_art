@@ -30,3 +30,8 @@
 .navbar-collapse {
     flex-grow: 0;
 }
+
+.footer-link {
+    font-size: 0.8rem;
+    margin-top: 0;
+}
