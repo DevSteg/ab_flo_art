@@ -1,3 +1,8 @@
+body {
+    background-color: azure;
+    font-family: ;
+}
+
 .top-header {
     background: url(../img/bg_img_top.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -38,6 +43,7 @@
 
 .cta-img-block {
     margin: 50px auto;
+    height: 50vh;
 }
 
 .img-block {
@@ -61,5 +67,33 @@
     position: relative;
     bottom: 200px;
     background-color: rgba(0, 0, 0, 0.247);
+
+}
+
+.insta-section {
+    height: 50vh;
+}
+
+.about-section {
+    margin-top: 15%;
+    height: 70vh;
+    text-align: center;
+}
+
+.port-img {
+    height: 500px;
+    border-radius: 10px;
+}
+
+.p-block {
+    text-align: left;
+}
+
+.p-block-title {
+    font-size: 2rem;
+}
+
+.af-sign-off {
+    font-size: 1.8rem;
 
 }
