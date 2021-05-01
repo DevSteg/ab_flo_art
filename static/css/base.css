@@ -111,4 +111,9 @@ body {
 .social-links a {
     color: rgba(103, 185, 233, 0.932);
     font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    color: rgb(68, 150, 197);
 }
