@@ -118,3 +118,37 @@ body {
     color: rgb(68, 150, 197);
     font-size: 1.8rem;
 }
+
+.product-section {
+    margin: 100px 0;
+}
+
+.product-title {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 3rem;
+    font-family: 'Bevan', cursive;
+    color: rgba(103, 185, 233, 0.932);
+}
+
+.card {
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: rgba(103, 185, 233, 0.932);
+}
+
+.card-title {
+    font-size: 1.8rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+}
+
+.card-img {
+    height: 300px;
+    width: auto;
+}
