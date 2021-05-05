@@ -133,6 +133,8 @@ body {
 
 .card {
     text-align: center;
+    background: none;
+    border: none;
 }
 
 .card a {
@@ -158,18 +160,17 @@ hr {
 }
 
 .pro-hr {
-    width: 65%;
+    width: 60%;
     margin: auto;
     margin-top: 50px;
 }
 
 .collec-hr {
-    width: 85%;
+    width: 80%;
 }
 
 .collec-sec {
     border-right: 1px solid rgba(212, 184, 148, 0.603);
-    margin-right: 20px;
     height: 100vh;
 }
 
