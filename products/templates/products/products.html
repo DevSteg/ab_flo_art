@@ -10,22 +10,44 @@
         <div class="col-12">
             <h2 class="product-title">&#10049; Products &#10049;</h2>
         </div>
-        <div class="product-section col-12">
-            <div class="row">
-                {% for product in products %}
-                <div class="col-md-3 col-lg-4 col-sm-12">
-                    <div class="card">
-                        <a href="#">
-                            <img src="{{ product.image.url }}" class="card-img-top card-img" alt="{{ product.name }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ product.name }}</h5>
-                                <h6 class="card-text">£{{ product.price }}</h6>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                {% endfor %}
+        <hr class="col-12 pro-hr">
+    </div>
+    <div class="product-section">
+        <div class="row">
+            <div class="col-2 collec-sec">
+                <h4 class="collection-title">Collections</h4>
+                <hr class="collec-hr">
+                <ul class="collection-list">
+                    <li class="nav-item">
+                        <a href="">Dishes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Cups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Ashtrays</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Prints</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Originals</a>
+                    </li>
+                </ul>
             </div>
+            {% for product in products %}
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <a href="#">
+                        <img src="{{ product.image.url }}" class="card-img-top card-img" alt="{{ product.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <h6 class="card-text">£{{ product.price }}</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

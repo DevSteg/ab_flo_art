@@ -120,7 +120,7 @@ body {
 }
 
 .product-section {
-    margin: 100px 0;
+    margin: 70px 0;
 }
 
 .product-title {
@@ -151,4 +151,48 @@ body {
 .card-img {
     height: 300px;
     width: auto;
+}
+
+hr {
+    color: rgb(212, 184, 148);
+}
+
+.pro-hr {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.collec-hr {
+    width: 85%;
+}
+
+.collec-sec {
+    border-right: 1px solid rgba(212, 184, 148, 0.603);
+    margin-right: 20px;
+    height: 100vh;
+}
+
+.collection-title {
+    font-size: 1.4rem;
+    font-family: 'Bevan', cursive;
+}
+
+.collection-list {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.collection-list li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgba(103, 185, 233, 0.932);
+    font-weight: 600;
+}
+
+.collection-list li a:hover {
+    font-size: 1.4rem;
+    color: rgb(68, 150, 197);
 }
