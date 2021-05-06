@@ -131,6 +131,10 @@ body {
     color: rgba(103, 185, 233, 0.932);
 }
 
+.product-block {
+    padding-left: 130px;
+}
+
 .card {
     text-align: center;
     background: none;
@@ -172,6 +176,8 @@ hr {
 .collec-sec {
     border-right: 1px solid rgba(212, 184, 148, 0.603);
     height: 100vh;
+    position: fixed;
+    width: 175px;
 }
 
 .collection-title {
