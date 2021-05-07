@@ -9,6 +9,7 @@ body {
     background: url(../img/bg_img_top.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 50vh;
+    margin-top: 94px;
 }
 
 .main-logo {
@@ -38,8 +39,10 @@ body {
     color: azure;
 }
 
-.navbar-collapse {
-    flex-grow: 0;
+.shop-bask a {
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
 }
 
 .footer-link {
@@ -143,7 +146,10 @@ body {
 
 .card a {
     text-decoration: none;
-    color: rgba(103, 185, 233, 0.932);
+}
+
+.card a:hover {
+    color: rgb(68, 150, 197);
 }
 
 .card-title {
@@ -195,7 +201,6 @@ hr {
 .collection-list li a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: rgba(103, 185, 233, 0.932);
     font-weight: 600;
 }
 
