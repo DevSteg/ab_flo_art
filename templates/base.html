@@ -42,10 +42,34 @@
                                 Shop
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Ceramics</a></li>
-                                <li><a class="dropdown-item" href="#">Ashtrays</a></li>
-                                <li><a class="dropdown-item" href="#">Prints</a></li>
-                                <li><a class="dropdown-item" href="#">Originals</a></li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?category=dishes,cups,ashtrays">All Ceramics</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'products' %}?category=dishes">Dishes</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'products' %}?category=cups">Cups</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'products' %}?category=ashtrays">Ashtrays</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'products' %}?category=prints,originals">
+                                        All Artwork
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'products' %}?category=prints">Prints</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?category=originals">Originals</a>
+                                </li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
