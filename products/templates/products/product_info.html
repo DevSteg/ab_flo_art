@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block ex_title %}
+- {{ product.name }}
 {% endblock %}
 
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="product-title">&#10049; {{ product.name }} &#10049;</h2>
+        </div>
+        <hr class="col-12 pro-hr">
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="product-info">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" class="card-img">
+                </a>
+                <div class="text-sky product-text">
+                    <h3 class="prod-name">{{ product.name }}</h3>
+                    <p class="prod-desc">{{ product.description }}</p>
+                    <h4 class="prod-price">£ {{ product.price }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
