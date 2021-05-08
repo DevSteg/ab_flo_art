@@ -208,3 +208,34 @@ hr {
     font-size: 1.4rem;
     color: rgb(68, 150, 197);
 }
+
+.product-info {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.prod-img {
+    height: 500px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+.product-text {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.prod-name {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.prod-price {
+    font-weight: 700;
+}
+
+.prod-desc {
+    margin: 25px 0;
+    font-size: 1.2rem;
+}

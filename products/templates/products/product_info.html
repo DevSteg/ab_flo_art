@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block ex_title %}
-- {{ product.name }}
+- Product/{{ product.name }}
 {% endblock %}
 
 {% block content %}
@@ -17,12 +17,12 @@
         <div class="col-12">
             <div class="product-info">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" class="card-img">
+                    <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" class="prod-img">
                 </a>
                 <div class="text-sky product-text">
                     <h3 class="prod-name">{{ product.name }}</h3>
-                    <p class="prod-desc">{{ product.description }}</p>
                     <h4 class="prod-price">£ {{ product.price }}</h4>
+                    <p class="prod-desc">{{ product.description }}</p>
                 </div>
             </div>
         </div>
