@@ -23,6 +23,28 @@
                     <h3 class="prod-name">{{ product.name }}</h3>
                     <h4 class="prod-price">£ {{ product.price }}</h4>
                     <p class="prod-desc">{{ product.description }}</p>
+
+                    <div class="add-item">
+                        {% if product.stock >= 1 %}
+                        <form class="form" action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" name="quantity" value="1" min="1" max="{{ product.stock }}">
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" class="btn btn-large shop-btn bg-sky" value="Add To Basket">
+                                    <a href="" class="back-btn">
+                                        <span><i class="fas fa-caret-square-left"></i> Back to Browsing</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                        {% else %}
+                        <h2>Sold Out!</h2>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
