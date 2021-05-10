@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'basket.context.basket_content',
             ],
         },
     },
@@ -98,6 +99,8 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'abigail_flower.wsgi.application'
+
+DELIVERY_PERCENTAGE = 10
 
 
 # Database
