@@ -1,2 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="product-title">&#10049; Shopping Basket &#10049;</h2>
+        </div>
+        <hr class="col-12 pro-hr">
+        <div class="col-12 ">
+            {% if basket_items %}
+            <div class="table-responsive rounded"></div>
+            {% else %}
+            <div class="text-sky empty-bask">
+                <p class="basket-tag">Your Basket is empty!</p>
+                <a href="" class="back-btn">
+                    <span><i class="fas fa-caret-square-left"></i> Back to Browsing</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

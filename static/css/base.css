@@ -256,7 +256,7 @@ hr {
 .back-btn {
     text-decoration: none;
     color: inherit;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 .back-btn i {
@@ -265,4 +265,13 @@ hr {
 
 .back-btn:hover {
     color: rgb(68, 150, 197);
+}
+
+.empty-bask {
+    margin-top: 50px;
+}
+
+.basket-tag {
+    font-size: 2rem;
+    margin-bottom: 25%;
 }
