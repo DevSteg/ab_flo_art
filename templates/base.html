@@ -95,7 +95,11 @@
                     <div class="shop-bask">
                         <a href="{%  url 'basket' %}" class="nav-link">
                             <i class="fas fa-shopping-basket"></i>
+                            {% if grand_total %}
+                            <p>£ {{ grand_total|floatformat:2 }}</p>
+                            {% else %}
                             <p>£0.00</p>
+                            {% endif %}
                         </a>
                     </div>
                 </div>
