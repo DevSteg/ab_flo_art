@@ -275,3 +275,16 @@ hr {
     font-size: 2rem;
     margin-bottom: 25%;
 }
+
+.table-h {
+    font-size: 1.3rem;
+}
+
+.table-responsive {
+    margin: auto;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
