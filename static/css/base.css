@@ -255,8 +255,12 @@ hr {
 
 .back-btn {
     text-decoration: none;
-    color: inherit;
+    color: rgba(103, 185, 233, 0.932);
     font-size: 1.8rem;
+    border: 1px solid rgba(103, 185, 233, 0.932);
+    padding: 0 5px;
+    border-radius: 5px;
+    width: auto;
 }
 
 .back-btn i {
@@ -264,7 +268,8 @@ hr {
 }
 
 .back-btn:hover {
-    color: rgb(68, 150, 197);
+    color: azure;
+    background-color: rgba(103, 185, 233, 0.932);
 }
 
 .empty-bask {
@@ -280,11 +285,14 @@ hr {
     font-size: 1.3rem;
 }
 
-.table-responsive {
-    margin: auto;
-    text-align: center;
+.checkout-btn {
+    color: azure;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
-.center {
-    text-align: center;
+.checkout-btn:hover {
+    background-color: azure;
+    color: rgb(68, 150, 197);
+    border: 1px solid rgba(103, 185, 233, 0.932);
 }
