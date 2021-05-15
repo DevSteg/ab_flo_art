@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse, reverse
 
 # Create your views here.
 
@@ -23,3 +23,13 @@ def add_to_basket(request, item_id):
     request.session['basket'] = basket
 
     return redirect(redirect_url)
+
+
+def remove_item(request, item_id):
+    """ Delete item from basket """
+    basket = request.session.get('basket', {})
+
+    basket.pop(item_id)
+
+    request.session['basket'] = basket
+    return redirect(reverse('basket'))

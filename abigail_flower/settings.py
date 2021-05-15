@@ -100,7 +100,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'abigail_flower.wsgi.application'
 
-DELIVERY_PERCENTAGE = 10
+DELIVERY_PERCENTAGE = 5
 
 
 # Database
