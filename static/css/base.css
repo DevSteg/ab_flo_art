@@ -296,3 +296,14 @@ hr {
     color: rgb(68, 150, 197);
     border: 1px solid rgba(103, 185, 233, 0.932);
 }
+
+.message {
+    position: fixed;
+    top: 100px;
+    right: 12px;
+    z-index: 5;
+}
+
+.toast-capper {
+    height: 4px;
+}
