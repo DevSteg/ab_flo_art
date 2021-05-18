@@ -8,7 +8,48 @@
             <h2 class="product-title">&#10049; Checkout &#10049;</h2>
         </div>
         <hr class="col-12 pro-hr">
-
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 col-sm-12 py-2 px-3">
+            <p class="text-muted">Please fill out the form to complete your order</p>
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="fieldset-label small text-black mt-3 px-2 w-auto">Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldset-label small text-black mt-3 px-2 w-auto">Delivery Details</legend>
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_city | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                        <label for="save-info" class="form-check-label"> Save delivery info to your account?</label>
+                        <input type="checkbox" class="form-check-input ml-2 mr-0" id="save-info" name="save-info">
+                        {% else %}
+                        <label class="form-check-label" for="save-info">
+                            <p class="text-info">
+                                <a href="{% url 'account_signup' %}">Register</a> or
+                                <a href="{% url 'account_login' %}">Login</a> account to save delivery info for next
+                                time.
+                            </p>
+                        </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldset-label small text-black mt-3 px-2 w-auto">Payment Details</legend>
+                    <div class="mb-3" id="card-element"></div>
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'abigail_flower.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 TEMPLATES = [
     {
