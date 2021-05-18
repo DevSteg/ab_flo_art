@@ -307,3 +307,8 @@ hr {
 .toast-capper {
     height: 4px;
 }
+
+.checkout-hr {
+    width: 60%;
+    margin: auto;
+}
