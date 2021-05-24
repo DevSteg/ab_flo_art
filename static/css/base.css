@@ -339,3 +339,7 @@ hr {
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
+
+.order-title {
+    font-weight: 700;
+}
