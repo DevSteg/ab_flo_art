@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="product-title">&#10049; Success &#10049;</h2>
+        </div>
+        <hr class="col-12 pro-hr">
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mt-5 text-sky text-center">
+            <h3><strong>Thank You!</strong></h3>
+            <p>Your purchase was successful</p>
+            <p>Your order information is below and a confirmation email will be sent to
+                <strong>{{ order.email }}</strong>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mb-5 d-flex justify-content-between">
+            <a href="{% url 'products' %}" class="back-btn col-4 text-start">
+                <span><i class="fas fa-caret-square-left"></i> Back to products</span>
+            </a>
+            <a href="#" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
+                <span>Your profile</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
