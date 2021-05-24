@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
 from basket.context import basket_content
-from .models import OrderLineItem
+from .models import OrderLineItem, Order
 from products.models import Product
 import stripe
 
@@ -34,13 +34,13 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for item_id, item_data in basket.items:
+            for item_id, quantity in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
-                        quantity=item_data,
+                        quantity=quantity,
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
@@ -86,3 +86,22 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
+
+def checkout_success(request, order_number):
+    """ Handle Successful checkouts """
+
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed \
+        Your order number is {order_number}. A confirmation emial \
+            will be sent to {order.email}.')
+
+    if 'basket' in request.session:
+        del request.session['basket']
+
+    context = {
+        'order': order,
+    }
+
+    return render(request, 'checkout/checkout_success.html', context)
