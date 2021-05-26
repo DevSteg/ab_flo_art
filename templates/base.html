@@ -122,7 +122,18 @@
     </div>
     {% endif %}
 
-    {% block header %}
+    {% block page_title %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-title">&#10049; {% block p-title %}{% endblock %} &#10049;</h2>
+            </div>
+            <hr class="col-12 pro-hr">
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block ex_header %}
     {% endblock %}
 
     {% block content %}

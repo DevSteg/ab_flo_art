@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
+{% block page_title %}{% endblock %}
+{% block ex_header %}
 <div class="top-header">
     <div class="container">
         <div class="row">
@@ -16,22 +17,26 @@
 <div class="container">
     <div class="row cta-img-block">
         <div class="col-md-5 img-block">
-            <a href="#" class="nav-link">
+            <a href="{% url 'products' %}?category=dishes,cups,ashtrays" class="nav-link">
                 <img src="{% static 'img/ceramics_link.jpg' %}" alt="Image of ceramic cups" class="link-img">
                 <h2 class="link-title">Ceramics</h2>
             </a>
         </div>
         <div class="col-md-5 img-block">
-            <a href="#" class="nav-link">
+            <a href="{% url 'products' %}?category=prints,originals" class="nav-link">
                 <img src="{% static 'img/artwork_link.jpg' %}" alt="Image of a Painting" class="link-img">
                 <h2 class="link-title">Artwork</h2>
             </a>
         </div>
     </div>
-    <div class="row insta-section">
-        <div class="col">
-            <div class="insta-imgs">
+</div>
+<div class="insta-section bg-sky">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="insta-imgs">
 
+                </div>
             </div>
         </div>
     </div>

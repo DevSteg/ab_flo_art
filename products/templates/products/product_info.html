@@ -1,18 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block ex_title %}
-- Product/{{ product.name }}
-{% endblock %}
+{% block ex_title %} - Product/{{ product.name }}{% endblock %}
+
+{% block p-title %}{{ product.name }}{% endblock %}
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="product-title">&#10049; {{ product.name }} &#10049;</h2>
-        </div>
-        <hr class="col-12 pro-hr">
-    </div>
     <div class="row">
         <div class="col-12">
             <div class="product-info">
