@@ -1,11 +1,24 @@
-{% extends "account/base.html" %}
-
+{% extends "base.html" %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Account Inactive" %}{% endblock %}
-
+{% block ex_title %} - {% trans "Account Inactive" %}{% endblock %}
+{% block header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="product-title">&#10049; {% trans "Account Inactive" %} &#10049;</h2>
+        </div>
+        <hr class="col-12 pro-hr">
+    </div>
+</div>
+{% endblock %}
 {% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
-
-<p>{% trans "This account is inactive." %}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 p-block text-sky">
+            <h3>{% trans "This account is inactive." %}</h3>
+            <p>Please contact for assitance</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

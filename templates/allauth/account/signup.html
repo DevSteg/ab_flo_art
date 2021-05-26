@@ -16,12 +16,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
-                in</a>.{% endblocktrans %}
-        </p>
-    </div>
-    <div class="row">
-        <div class="col-lg-6 col-sm-12 text-sky m-auto mb-4 text-bold">
+        <div class="col-lg-6 col-sm-12 text-sky m-auto mt-5 mb-4 text-bold">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -32,6 +27,11 @@
                     &raquo;</button>
             </form>
         </div>
+    </div>
+    <div class="row">
+        <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+                in</a>.{% endblocktrans %}
+        </p>
     </div>
 </div>
 {% endblock %}
