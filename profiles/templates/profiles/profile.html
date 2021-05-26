@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block ex_title %} - Success{% endblock %}
+
+{% block p_title %}<span>Profile</span>{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 p-block text-sky">
+            {{ profile }}
+        </div>
+    </div>
+</div>
+{% endblock %}
