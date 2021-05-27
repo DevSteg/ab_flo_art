@@ -91,3 +91,15 @@ def edit_product(request, product_id):
     else:
         messages.error(request, 'You must be admin to access this page')
         return render(request, 'home/index.html')
+
+
+def delete_product(request, product_id):
+    """ Delete Product from the store """
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=product_id)
+        product.delete()
+        messages.success(request, f'{product.name} was deleted from the store')
+        return redirect(reverse('products'))
+    else:
+        messages.error(request, 'You must be admin to delete a product')
+        return render(request, 'home/index.html')

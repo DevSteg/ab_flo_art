@@ -35,6 +35,10 @@ body {
     font-size: 1rem;
 }
 
+.no-under {
+    text-decoration: none;
+}
+
 .nav-link {
     font-weight: 600;
     color: azure;

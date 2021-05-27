@@ -43,6 +43,17 @@
                                     <h6 class="card-text">£ {{ product.price }}</h6>
                                 </div>
                             </a>
+                            {% if request.user.is_superuser %}
+                            <div class="row">
+                                <div class="col-12 text-end">
+                                    <a href="{% url 'edit_product' product.id %}" class="small text-sky no-under">Edit
+                                    </a> |
+                                    <a href="{% url 'delete_product' product.id %}"
+                                        class="small text-danger no-under mb-5">
+                                        Delete</a>
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
