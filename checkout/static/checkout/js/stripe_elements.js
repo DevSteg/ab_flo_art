@@ -1,9 +1,9 @@
-const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-const clientSecret = $('#id_client_secret').text().slice(1, -1);
-const stripe = Stripe(stripePublicKey);
-const elements = stripe.elements();
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+let clientSecret = $('#id_client_secret').text().slice(1, -1);
+let stripe = Stripe(stripePublicKey);
+let elements = stripe.elements();
 
-const style = {
+let style = {
     base: {
         color: '#000',
         fontFamily: '"Rokkitt", serif',
@@ -19,7 +19,7 @@ const style = {
     }
 };
 
-const card = elements.create('card', {
+let card = elements.create('card', {
     style: style
 });
 card.mount('#card-element');
@@ -53,9 +53,9 @@ form.addEventListener('submit', function (ev) {
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
-    const saveInfo = Boolean($('#save-info').attr('checked'));
-    const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
-    const postData = {
+    let saveInfo = Boolean($('#save-info').attr('checked'));
+    let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    let postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
         'save_info': saveInfo,
