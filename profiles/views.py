@@ -14,7 +14,7 @@ def profile(request):
         profile = get_object_or_404(UserProfile, user=user)
 
         if request.method == 'POST':
-            form = UserProfile(request.POST, instance=profile)
+            form = ProfileForm(request.POST, instance=profile)
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Your Profile has been updated')
