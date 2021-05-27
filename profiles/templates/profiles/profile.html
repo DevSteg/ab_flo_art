@@ -8,9 +8,30 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 p-block text-sky">
-            {{ profile }}
+        <div class="col-sm-12 col-lg-6 p-block text-sky">
+            <p class='text-muted'>Order History</p>
+        </div>
+        <div class="col-sm-12 col-lg-6 p-block text-sky">
+            <form action="{% url 'profile' %}" method="POST" id="profile-form">
+                {% csrf_token %}
+                <p class='text-muted'>Full Name</p>
+                {{ form.default_full_name | as_crispy_field }}
+                <p class='text-muted mt-3'>Delivery Address</p>
+                {{ form.default_phone_number | as_crispy_field }}
+                {{ form.default_street_address1 | as_crispy_field }}
+                {{ form.default_street_address2 | as_crispy_field }}
+                {{ form.default_town_city | as_crispy_field }}
+                {{ form.default_postcode | as_crispy_field }}
+                {{ form.default_county | as_crispy_field }}
+                {{ form.default_country | as_crispy_field }}
+                <input type="submit" class="btn btn-large bg-sky col-10 ms-5 mt-3 mb-5 checkout-btn"
+                    id="update-prof-btn" value="Update Profile">
+            </form>
         </div>
     </div>
 </div>
+{% endblock %}
+{% block js %}
+{{ block.super }}
+<script src="{% static 'profiles/js/countrySelect.js' %}" type="text/javascript"></script>
 {% endblock %}

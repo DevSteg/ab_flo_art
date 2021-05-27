@@ -346,17 +346,21 @@ hr {
     background-color: #fefde5 !important;
 }
 
-.stripe-style-input::placeholder {
+.stripe-style-input::placeholder,
+.textInput::placeholder {
     color: #aab7c4;
 }
 
 select,
-select option {
+select option,
+#id_default_country,
+#id_default_country option:not(:first-child) {
     color: #000000;
 }
 
 select:invalid,
-select option[value=''] {
+select option[value=''],
+#id_default_country option:first-child {
     color: #aab7c4 !important;
 }
 
