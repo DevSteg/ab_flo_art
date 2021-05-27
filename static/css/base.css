@@ -386,3 +386,8 @@ select option[value=''],
     margin: 0;
     height: 100%;
 }
+
+.order-hist {
+    max-height: 416px;
+    overflow-y: auto;
+}

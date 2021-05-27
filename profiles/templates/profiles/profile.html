@@ -8,10 +8,54 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-lg-6 p-block text-sky">
-            <p class='text-muted'>Order History</p>
+        <div class="col-sm-12 mt-4">
+            <button class="btn checkout-btn bg-sky d-md-none w-100" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOrders" aria-expanded="false" aria-controls="collapseExample">
+                View Order History <i class="fas fa-chevron-down fa-xs"></i>
+            </button>
         </div>
-        <div class="col-sm-12 col-lg-6 p-block text-sky">
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 p-block text-sky d-md-block collapse" id="collapseOrders">
+            <p class='text-muted'>Order History</p>
+            <div class="table-responsive rounded order-hist">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="text-sky text-bold">
+                            <th scope="col" class="table-h">Order Number</th>
+                            <th scope="col" class="table-h">Date</th>
+                            <th scope="col" class="table-h">Items</th>
+                            <th scope="col" class="table-h">Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order_number }}">
+                                    {{ order.order_number|truncatechars:10}}
+                                </a>
+                            </td>
+                            <td class="small">{{ order.date }}</td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                    <li class="small">
+                                        {{ item.product.name }} x {{ item.quantity }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                £{{ order.grand_total }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 p-block text-sky">
             <form action="{% url 'profile' %}" method="POST" id="profile-form">
                 {% csrf_token %}
                 <p class='text-muted'>Full Name</p>
