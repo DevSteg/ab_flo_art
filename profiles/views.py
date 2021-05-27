@@ -12,6 +12,12 @@ def profile(request):
     if user.is_authenticated:
         profile = get_object_or_404(UserProfile, user=user)
 
+        if request.method == 'POST':
+            form = UserProfile(request.POST, instance=profile)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Your Profile has been updated')
+
         form = ProfileForm(instance=profile)
         orders = profile.orders.all()
 
