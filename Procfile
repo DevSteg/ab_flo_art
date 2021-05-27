@@ -1,0 +1,1 @@
+web: gunicorn abigail_flower.wsgi:application
