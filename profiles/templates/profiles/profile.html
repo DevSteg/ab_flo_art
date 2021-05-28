@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block ex_title %} - Success{% endblock %}
+{% block ex_title %} - Profile{% endblock %}
 
-{% block p_title %}<span>Profile</span>{% endblock %}
+{% block p_title %}<span>{{ user.username|capfirst }}'s Profile</span>{% endblock %}
 
 {% block content %}
 <div class="container">
