@@ -21,13 +21,13 @@
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset>
-                    <legend class="fieldset-label small text-black mt-3 px-2 w-auto">Details</legend>
+                    <legend class="fieldset-label text-bold text-sky mt-3 px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset>
-                    <legend class="fieldset-label small text-black mt-3 px-2 w-auto">Delivery Details</legend>
+                    <legend class="fieldset-label text-bold text-sky mt-3 px-2 w-auto">Delivery Details</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_city | as_crispy_field }}
@@ -36,7 +36,8 @@
                     {{ order_form.country | as_crispy_field }}
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
-                        <label for="save-info" class="form-check-label"> Save delivery info to your account?</label>
+                        <label for="save-info" class="form-check-label text-sky"> Save delivery info to your
+                            account?</label>
                         <input type="checkbox" class="form-check-input ml-2 mr-0" id="save-info" name="save-info">
                         {% else %}
                         <label class="form-check-label" for="save-info">
@@ -58,13 +59,13 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="row mt-4 mb-5">
-                    <div class="col-12 d-flex justify-content-between">
-                        <a href="{% url 'basket' %}" class="back-btn col-4 text-start">
-                            <span class="small"><i class="fas fa-caret-square-left"></i> Edit Basket</span>
-                        </a>
-                        <input type="submit" class="btn btn-large bg-sky col-3 ms-5 checkout-btn" id="purchase-btn"
+                    <div class="col-12 text-end">
+                        <input type="submit" class="btn btn-large bg-sky col-5 ms-5 checkout-btn" id="purchase-btn"
                             value="Purchase">
                     </div>
+                    <a href="{% url 'basket' %}" class="back-btn text-start">
+                        <span class="small"><i class="fas fa-caret-square-left"></i> Edit Basket</span>
+                    </a>
                 </div>
             </form>
         </div>

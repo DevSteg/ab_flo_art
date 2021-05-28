@@ -18,13 +18,13 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="col-12 d-flex justify-content-between">
-                    <a href="{% url 'products' %}" class="back-btn col-4 text-start">
-                        <span class="small"><i class="fas fa-caret-square-left"></i> Cancel</span>
-                    </a>
-                    <input type="submit" class="btn btn-large bg-sky col-3 ms-5 checkout-btn" id="edit-prod-btn"
+                <div class="col-12 text-end">
+                    <input type="submit" class="btn btn-large bg-sky col-5 ms-5 checkout-btn" id="edit-prod-btn"
                         value="Update Product">
                 </div>
+                <a href="{% url 'products' %}" class="back-btn text-start">
+                    <span class="small"><i class="fas fa-caret-square-left"></i> Cancel</span>
+                </a>
             </form>
             <a href="{% url 'delete_product' product.id %}" class="small text-danger no-under mb-5">Delete</a>
         </div>

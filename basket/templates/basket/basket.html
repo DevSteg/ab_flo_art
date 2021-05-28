@@ -52,19 +52,19 @@
                                 <h6>Basket Total: £{{ total|floatformat:2 }}</h6>
                                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                 <h5><strong>Grand Total: £{{ grand_total|floatformat:2}}</strong></h5>
-                                <div class="mt-5 d-flex justify-content-between">
-                                    <a href="{% url 'products' %}" class="back-btn col-4 text-start">
-                                        <span><i class="fas fa-caret-square-left"></i> Back to Browsing</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
-                                        <span>Secure Checkout</span>
-                                    </a>
-                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="col-12 mt-5 mb-5">
+                    <div class="mt-5 text-end">
+                        <a href="{% url 'checkout' %}" class="btn btn-large bg-sky col-5 ms-5 checkout-btn">
+                            <span>Secure Checkout</span>
+                        </a>
+                    </div>
+                    <a href="{% url 'products' %}" class="back-btn text-start">
+                        <span><i class="fas fa-caret-square-left"></i> Back to Browsing</span>
+                    </a>
                 </div>
             </div>
             {% else %}
