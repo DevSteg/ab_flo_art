@@ -6,7 +6,7 @@
 {% block p_title %}<span>Products</span>{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container content-block">
     <div class="product-section">
         <div class="row">
             <div class="col-2 collec-sec">
@@ -33,7 +33,7 @@
             <div class="col-12 product-block">
                 <div class="row">
                     {% for product in products %}
-                    <div class="col-lg-3 col-md-4 col-sm-12 ms-5">
+                    <div class="col-lg-3 col-md-4 col-sm-12 ms-5 mt-5">
                         <div class="card">
                             <a href="{% url 'product_info' product.id %}" class="text-sky">
                                 <img src="{{ product.image.url }}" class="card-img-top card-img"

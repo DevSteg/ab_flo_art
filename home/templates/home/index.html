@@ -14,51 +14,53 @@
 </div>
 {% endblock %}
 {% block content %}
-<div class="container">
-    <div class="row cta-img-block mt-5 text-sky">
-        <div class="col-lg-6 col-sm-12 col-md-6 img-block">
-            <a href="{% url 'products' %}?category=dishes,cups,ashtrays" class="text-sky no-under">
-                <img src="{% static 'img/ceramics_link.jpg' %}" alt="Image of ceramic cups" class="link-img">
-                <h2 class="link-title">Ceramics</h2>
-            </a>
-        </div>
-        <div class="col-lg-6 col-sm-12 col-md-6 img-block">
-            <a href="{% url 'products' %}?category=prints,originals" class="text-sky no-under">
-                <img src="{% static 'img/artwork_link.jpg' %}" alt="Image of a Painting" class="link-img">
-                <h2 class="link-title">Artwork</h2>
-            </a>
+<div class="content-block">
+    <div class="container">
+        <div class="row cta-img-block mt-5 text-sky">
+            <div class="col-lg-6 col-sm-12 col-md-6 img-block">
+                <a href="{% url 'products' %}?category=dishes,cups,ashtrays" class="text-sky no-under">
+                    <img src="{% static 'img/ceramics_link.jpg' %}" alt="Image of ceramic cups" class="link-img">
+                    <h2 class="link-title">Ceramics</h2>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 img-block">
+                <a href="{% url 'products' %}?category=prints,originals" class="text-sky no-under">
+                    <img src="{% static 'img/artwork_link.jpg' %}" alt="Image of a Painting" class="link-img">
+                    <h2 class="link-title">Artwork</h2>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<div class="insta-section bg-sky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mt-4 mb-4">
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner col-6">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="{% static 'img/good_days_bowl.jpg'%}" class="d-block insta-img"
-                                alt="Instagram Image">
+    <div class="insta-section bg-sky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-4 mb-4">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner col-6">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="{% static 'img/good_days_bowl.jpg'%}" class="d-block insta-img"
+                                    alt="Instagram Image">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="{% static 'img/good_today_plate.jpg'%}" class="d-block insta-img"
+                                    alt="Instagram Image">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'img/life_is_sweet_plate.jpg'%}" class="d-block insta-img"
+                                    alt="Instagram Image">
+                            </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="{% static 'img/good_today_plate.jpg'%}" class="d-block insta-img"
-                                alt="Instagram Image">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/life_is_sweet_plate.jpg'%}" class="d-block insta-img"
-                                alt="Instagram Image">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
