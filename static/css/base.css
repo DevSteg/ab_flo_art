@@ -182,14 +182,8 @@ footer {
 }
 
 /* /About Template CSS */
-
-/* Product Template CSS */
-.product-section {
-    margin: 70px 0;
-}
-
 .product-block {
-    padding-left: 130px;
+    padding-left: 165px;
 }
 
 .card {
@@ -231,6 +225,10 @@ hr {
 
 .collec-hr {
     width: 80%;
+}
+
+.collec-dropdown li a:hover {
+    color: rgb(68, 150, 197);
 }
 
 .collec-sec {
@@ -457,6 +455,12 @@ select option[value=''],
 /* /Order History Box CSS */
 
 /* Media Queries */
+@media only screen and (min-width: 1024px) {
+    .collec-dropdown {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .port-img {
         height: 250px;
@@ -464,6 +468,18 @@ select option[value=''],
 
     .block-1024 {
         font-size: 1.7rem;
+    }
+
+    .product-block {
+        padding-left: 0;
+    }
+
+    .collec-sec {
+        display: none;
+    }
+
+    .collec-dropdown {
+        display: block;
     }
 }
 
@@ -491,6 +507,10 @@ select option[value=''],
 
     .p-block {
         font-size: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
     }
 }
 

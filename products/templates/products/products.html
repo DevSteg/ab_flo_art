@@ -7,10 +7,37 @@
 
 {% block content %}
 <div class="container content-block">
+    <div class="row mt-3  collec-dropdown">
+        <li class="nav-item dropdown">
+            <a class="collection-title dropdown-toggle no-under text-sky" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Collections
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="nav-item">
+                    <a href="{% url 'products' %}?category=dishes" class="text-sky dropdown-item no-under">Dishes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'products' %}?category=cups" class="text-sky dropdown-item no-under">Cups</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'products' %}?category=ashtrays"
+                        class="text-sky dropdown-item no-under">Ashtrays</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'products' %}?category=prints" class="text-sky dropdown-item no-under">Prints</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'products' %}?category=originals"
+                        class="text-sky dropdown-item no-under">Originals</a>
+                </li>
+            </ul>
+        </li>
+    </div>
     <div class="product-section">
-        <div class="row">
-            <div class="col-2 collec-sec">
-                <h4 class="collection-title">Collections</h4>
+        <div class="row mt-5">
+            <div class="col-md-2 collec-sec">
+                <h4 class="collection-title text-sky">Collections</h4>
                 <hr class="collec-hr">
                 <ul class="collection-list">
                     <li class="nav-item">
@@ -30,13 +57,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-12 product-block">
+            <div class="product-block">
                 <div class="row">
                     {% for product in products %}
-                    <div class="col-lg-3 col-md-4 col-sm-12 ms-5 mt-5">
-                        <div class="card">
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-4">
+                        <div class="card h-100">
                             <a href="{% url 'product_info' product.id %}" class="text-sky">
-                                <img src="{{ product.image.url }}" class="card-img-top card-img"
+                                <img src="{{ product.image.url }}" class="card-img-top card-img img-fluid"
                                     alt="{{ product.name }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ product.name }}</h5>
@@ -62,4 +89,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
