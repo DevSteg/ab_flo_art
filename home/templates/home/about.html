@@ -2,16 +2,17 @@
 {% load static %}
 {% block ex_title %} - About{% endblock %}
 
-{% block page_title %}{% endblock %}
+{% block p_title %}<span>About</span>{% endblock %}
+
 {% block content %}
 <div class="container content-block">
-    <div class="row about-section">
-        <div class="col-md-6">
+    <div class="row about-section mt-5">
+        <div class="col-md-12 col-xl-6">
             <img src="{% static 'img/abi_port.jpeg' %}" class="port-img" alt="Portrait image of Abigail Flower">
         </div>
-        <div class="col-md-6 text-sky">
+        <div class="col-lg-8 col-xl-6 col-sm-12 text-sky m-auto mt-5">
             <h3 class="p-block-title">Hey flower &#10049;</h3>
-            <div class="p-block">
+            <div class="p-block text-block-1024">
                 <p>Thank you for being here! My name is Abigail Flower and I'm an artist based in the
                     uk</p>
                 <p>I’m so passionate about creating and putting positivity out into the world, and I hope my art
@@ -24,7 +25,8 @@
             <div class="social-cta">
                 <p>Join me on this journey</p>
                 <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/abigailflower_/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
