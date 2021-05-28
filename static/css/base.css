@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bevan&family=Rokkitt:wght@100;400;700&display=swap');
 
+/* Base.html and Site wide CSS */
 body {
     background-color: azure;
     font-family: 'Rokkitt', serif;
@@ -18,7 +19,7 @@ body {
 }
 
 .bg-sky {
-    background-color: rgba(103, 185, 233, 0.932);
+    background-color: rgba(144, 212, 252, 0.925);
 }
 
 .text-sky {
@@ -72,11 +73,9 @@ body {
     margin-top: 0;
 }
 
-.cta-img-block {
-    margin: 50px auto;
-    height: 50vh;
-}
+/* /Base.html and Site wide CSS */
 
+/* Home Template CSS */
 .img-block {
     margin: auto;
 }
@@ -86,25 +85,35 @@ body {
     max-height: 370px;
     width: 100%;
     border-radius: 10px;
-    z-index: 0;
+}
+
+.img-block a:hover {
+    color: rgb(68, 150, 197);
 }
 
 .link-title {
-    color: azure;
     font-size: 2.5rem;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.384);
     text-align: center;
-    z-index: 1;
     position: relative;
-    bottom: 200px;
-    background-color: rgba(0, 0, 0, 0.247);
-
+    bottom: 3rem;
+    font-family: 'Bevan', cursive;
+    background-color: rgba(240, 255, 255, 0.74);
 }
 
 .insta-section {
     height: 50vh;
 }
 
+.insta-img {
+    height: 425px;
+    width: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* /Home template CSS */
+
+/* About Template CSS */
 .about-section {
     margin-top: 15%;
     height: 70vh;
@@ -144,6 +153,9 @@ body {
     font-size: 1.8rem;
 }
 
+/* /About Template CSS */
+
+/* Product Template CSS */
 .product-section {
     margin: 70px 0;
 }
@@ -223,6 +235,9 @@ hr {
     color: rgb(68, 150, 197);
 }
 
+/* /Products Template Css */
+
+/* Product Info Template */
 .product-info {
     display: flex;
     justify-content: center;
@@ -254,6 +269,9 @@ hr {
     font-size: 1.2rem;
 }
 
+/* /Product Info Template CSS */
+
+/* Basket and Checkout Template CSS */
 .shop-btn {
     width: 100%;
     color: azure;
@@ -311,6 +329,14 @@ hr {
     border: 1px solid rgba(103, 185, 233, 0.932);
 }
 
+.checkout-hr {
+    width: 60%;
+    margin: auto;
+}
+
+/* /Basket and Checkout Template CSS */
+
+/* Toasts CSS */
 .message {
     position: fixed;
     top: 100px;
@@ -322,11 +348,9 @@ hr {
     height: 4px;
 }
 
-.checkout-hr {
-    width: 60%;
-    margin: auto;
-}
+/* /Toasts CSS */
 
+/* Stripe and Form Elements CSS */
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
@@ -372,6 +396,9 @@ select option[value=''],
     font-weight: 700;
 }
 
+/* /Stripe and Form Elements CSS */
+
+/* Checkout Loading Overlay CSS */
 #loading-overlay {
     display: none;
     position: fixed;
@@ -391,7 +418,31 @@ select option[value=''],
     height: 100%;
 }
 
+/* /Checkout Loading Overlay CSS */
+
+/* Order History Box CSS */
 .order-hist {
     max-height: 416px;
     overflow-y: auto;
 }
+
+/* /Order History Box CSS */
+
+/* Media Queries */
+@media only screen and (max-width: 992px) {
+    .top-header {
+        height: 40vh;
+        margin-top: 55px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .insta-img {
+        height: 250px;
+        width: auto;
+        margin: auto;
+        border-radius: 10px;
+    }
+}
+
+/* Media Queries */
