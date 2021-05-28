@@ -485,6 +485,15 @@ select option[value=''],
         height: 40vh;
         margin-top: 55px;
     }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
