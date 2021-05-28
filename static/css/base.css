@@ -272,6 +272,7 @@ hr {
 
 .prod-img {
     height: 500px;
+    width: auto;
     border-radius: 10px;
     margin-right: 100px;
 }
@@ -314,15 +315,11 @@ hr {
 .back-btn {
     text-decoration: none;
     color: rgba(103, 185, 233, 0.932);
-    font-size: 1.8rem;
+    font-size: 1.2em;
     border: 1px solid rgba(103, 185, 233, 0.932);
     padding: 0 5px;
     border-radius: 5px;
     width: auto;
-}
-
-.back-btn i {
-    font-size: 1.6rem;
 }
 
 .back-btn:hover {
@@ -495,8 +492,18 @@ select option[value=''],
         height: 250px;
         width: auto;
         margin: auto;
-        border-radius: 10px;
     }
+
+    .prod-img {
+        height: 250px;
+        margin-right: 0;
+        margin-left: 14%;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -509,9 +516,6 @@ select option[value=''],
         font-size: 1rem;
     }
 
-    .page-title {
-        font-size: 2rem;
-    }
 }
 
 /* Media Queries */
