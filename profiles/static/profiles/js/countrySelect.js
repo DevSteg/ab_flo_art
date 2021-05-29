@@ -1,3 +1,4 @@
+// Javascript for styling the country select form box
 let countrySelect = $('#id_default_country').val();
 if (!countrySelect) {
     $('#id_default_country').css('color', '#aab7c4');

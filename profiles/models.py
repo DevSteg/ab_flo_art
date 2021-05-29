@@ -9,7 +9,7 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
     """
-    User Profile modle to handle maintaining delivery address
+    User Profile model to handle maintaining delivery address
     and order history.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
