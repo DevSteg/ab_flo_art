@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
+
+<!-- Tab Title -->
 {% block ex_title %} - About{% endblock %}
 
+<!-- Page Title -->
 {% block p_title %}<span>About</span>{% endblock %}
 
+<!-- Page Content -->
 {% block content %}
 <div class="container content-block">
     <div class="row about-section mt-5">
+        <!-- Portrait Image of Artist -->
         <div class="col-md-12 col-xl-6">
             <img src="{% static 'img/abi_port.jpeg' %}" class="port-img" alt="Portrait image of Abigail Flower">
         </div>
+        <!-- About info on Artist -->
         <div class="col-lg-8 col-xl-6 col-sm-12 text-sky m-auto mt-5">
             <h3 class="p-block-title">Hey flower &#10049;</h3>
             <div class="p-block text-block-1024">
@@ -22,6 +28,7 @@
                     I hope you love my creations and I appreciate you all! You make my dreams a reality!</p>
             </div>
             <h4 class="af-sign-off">Abigail&#10049;Flower</h4>
+            <!-- Social Link for Artist Page -->
             <div class="social-cta">
                 <p>Join me on this journey</p>
                 <div class="social-links">
