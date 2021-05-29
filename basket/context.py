@@ -27,6 +27,9 @@ def basket_content(request):
 
     delivery = total * Decimal(settings.DELIVERY_PERCENTAGE / 100)
 
+    if delivery >= 15:
+        delivery = 15
+
     grand_total = delivery + total
 
     context = {
