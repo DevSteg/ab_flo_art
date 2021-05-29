@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- Tab Title -->
 {% block ex_title %} - Product Management{% endblock %}
 
+<!-- Page Title -->
 {% block p_title %}<span>Product Management</span>{% endblock %}
 
+<!-- Page Content -->
 {% block content %}
 <div class="container content-block">
     <div class="row">
@@ -12,6 +15,7 @@
             <h3 class="text-muted">Add a Product</h3>
         </div>
     </div>
+    <!-- Add a Product Form -->
     <div class="row">
         <div class="col-sm-12 col-lg-6 p-block text-sky mt-1 m-auto">
             <form action="{%url 'add_product' %}" method="POST" class="form mb-3 text-bold"

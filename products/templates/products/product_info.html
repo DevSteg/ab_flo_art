@@ -1,25 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- Tab Title -->
 {% block ex_title %} - Product/{{ product.name }}{% endblock %}
 
+<!-- Page Title -->
 {% block p_title %}{{ product.name }}{% endblock %}
 
+<!-- Page Content -->
 {% block content %}
 <div class="container content-block">
     <div class="product-info">
         <div class="row m-auto">
+            <!-- Product Image -->
             <div class="col-md-6 col-sm-12 mt-lg-5 m-sm-3">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" class="prod-img img-fluid">
                 </a>
             </div>
+            <!-- Product Info and Shop Buttons -->
             <div class="col-md-5 col-sm-12 mt-lg-5 mt-sm-3">
                 <div class="text-sky product-text">
                     <h3 class="prod-name">{{ product.name }}</h3>
                     <h4 class="prod-price">£ {{ product.price }}</h4>
                     <p class="prod-desc">{{ product.description }}</p>
                     <div class="add-item">
+                        <!-- Shop buttons only show when product has stock -->
                         {% if product.stock >= 1 %}
                         <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                             {% csrf_token %}
@@ -40,6 +46,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- Edit Delete buttons only show when shop owner is logged in -->
                             {% if request.user.is_superuser %}
                             <div class="row">
                                 <div class="col-12 text-end">
@@ -54,6 +61,7 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
                         {% else %}
+                        <!-- Sold Out Shows if no stock -->
                         <div class="sold-out">
                             <h2>Sold Out!</h2>
                             <a href="{% url 'products' %}" class="back-btn">

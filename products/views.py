@@ -11,6 +11,7 @@ def all_products(request):
     products = Product.objects.all()
     categories = None
 
+    # Category Filter
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -26,7 +27,7 @@ def all_products(request):
 
 
 def product_info(request, product_id):
-    """ Renders product info """
+    """ Renders product information """
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -48,7 +49,8 @@ def add_product(request):
                 return redirect(reverse('add_product'))
             else:
                 messages.error(
-                    request, 'Failed to add product, Please check the form is correct')
+                    request, 'Failed to add product, \
+                    Please check the form is correct')
         else:
             form = ProductForm()
 
@@ -66,6 +68,7 @@ def add_product(request):
 
 def edit_product(request, product_id):
     """ Edit and existing product in the store """
+    # Only accessible to superusers
     if request.user.is_superuser:
         product = get_object_or_404(Product, pk=product_id)
         if request.method == 'POST':
@@ -77,7 +80,8 @@ def edit_product(request, product_id):
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(
-                    request, 'Failed to update product, Please check the form is correct')
+                    request, 'Failed to update product, \
+                         Please check the form is correct')
         else:
             form = ProductForm(instance=product)
             messages.info(request, f'You are editing {product.name}')
@@ -95,6 +99,7 @@ def edit_product(request, product_id):
 
 def delete_product(request, product_id):
     """ Delete Product from the store """
+    # Only accessible to superusers
     if request.user.is_superuser:
         product = get_object_or_404(Product, pk=product_id)
         product.delete()

@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Category(models.Model):
-
+    # Category Model
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -19,6 +19,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    # Product Model
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=100, null=False, blank=False)
