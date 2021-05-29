@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load basket_tools %}
 
 {% block ex_title %} - Basket{% endblock %}
 
@@ -38,7 +39,7 @@
                                 <p>{{ item.quantity }}</p>
                             </td>
                             <td class="p-3">
-                                <p>£{{ item.product.price }}</p>
+                                <p>£{{ item.product.price | subtotal_calc:item.quantity }}</p>
                                 <div class="text-end">
                                     <a href="{% url 'remove_item' item.product.id %}" class="text-danger">
                                         <i class="far fa-trash-alt"></i>

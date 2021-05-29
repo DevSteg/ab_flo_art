@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load basket_tools %}
 
 {% block ex_title %} - Checkout{% endblock %}
 
@@ -92,7 +93,7 @@
                     <p>Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3">
-                    <p class="text-end">£{{ item.product.price }}</p>
+                    <p class="text-end">£{{ item.product.price | subtotal_calc:item.quantity }}</p>
                 </div>
                 <hr class="col-12 checkout-hr">
             </div>
