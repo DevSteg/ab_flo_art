@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- Tab Title -->
 {% block ex_title %} - Success{% endblock %}
 
+<!-- Page Title -->
 {% block p_title %}<span>Success</span>{% endblock %}
 
+<!-- Page Content -->
 {% block content %}
 <div class="container content-block">
+    <!-- Checkout success -->
     <div class="row">
         <div class="col-lg-8 col-sm-12 mt-5 text-sky">
             <h2><strong>Thank You!</strong></h2>
@@ -16,6 +20,7 @@
         </div>
         <hr class="col-12 checkout-hr">
     </div>
+    <!-- Order Summary -->
     <div class="row">
         <div class="col-lg-6 col-sm-12 mt-4">
             <div class="order-wrapper p-2 border">
@@ -165,7 +170,7 @@
             <a href="{% url 'products' %}" class="back-btn col-4 text-start">
                 <span><i class="fas fa-caret-square-left"></i> Back to products</span>
             </a>
-            <a href="#" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
+            <a href="" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
                 <span>Your profile</span>
             </a>
         </div>
