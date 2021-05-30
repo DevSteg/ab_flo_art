@@ -14,9 +14,13 @@
         <div class="row m-auto">
             <!-- Product Image -->
             <div class="col-md-6 col-sm-12 mt-lg-5 m-sm-3">
+                {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
                     <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" class="prod-img img-fluid">
                 </a>
+                {% else %}
+                <img src="{% static 'img/no-image.png' %}" alt="Image of {{ product.name }}" class="prod-img img-fluid">
+                {% endif %}
             </div>
             <!-- Product Info and Shop Buttons -->
             <div class="col-md-5 col-sm-12 mt-lg-5 mt-sm-3">

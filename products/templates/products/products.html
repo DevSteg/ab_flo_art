@@ -69,8 +69,13 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-4">
                         <div class="card h-100">
                             <a href="{% url 'product_info' product.id %}" class="text-sky">
+                                {% if product.image %}
                                 <img src="{{ product.image.url }}" class="card-img-top card-img img-fluid"
                                     alt="{{ product.name }}">
+                                {% else %}
+                                <img src="{% static 'img/no-image.png' %}" class="card-img-top card-img img-fluid"
+                                    alt="{{ product.name }}">
+                                {% endif %}
                                 <!-- if product has stock -->
                                 {% if product.stock >= 1 %}
                                 <div class="card-body">

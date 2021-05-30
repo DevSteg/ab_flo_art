@@ -93,8 +93,13 @@
             {% for item in basket_items %}
             <div class="row">
                 <div class="col-2">
+                    {% if item.product.image %}
                     <img src="{{ item.product.image.url }}" alt="Product image for {{ item.product.name }}"
                         class="img-fluid rounded">
+                    {% else %}
+                    <img src="{% static 'img/no-image.png' %}" alt="Product image of {{ item.product.name }}"
+                        class="img-fluid rounded">
+                    {% endif %}
                 </div>
                 <div class="col-7">
                     <h5><strong>{{ item.product.name }}</strong></h5>
