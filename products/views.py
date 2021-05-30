@@ -80,7 +80,7 @@ def edit_product(request, product_id):
                 form.save()
                 messages.success(
                     request, f'{product.name} Updated Successfully')
-                return redirect(reverse('product_detail', args=[product.id]))
+                return redirect(reverse('product_info', args=[product.id]))
             else:
                 messages.error(
                     request, 'Failed to update product, \
