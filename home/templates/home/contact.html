@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!-- Tab Title -->
+{% block ex_title %} - Contact{% endblock %}
+
+<!-- Page Title -->
+{% block p_title %}Contact{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+<div class="container content-block">
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-6 col-sm-12 text-sky m-auto mt-5 mb-4 text-bold">
+            <form class="signup" id="signup_form" method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-large bg-sky col-12 mt-4 mb-3 checkout-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Social Media Link -->
+        <div class="col-12 p-block text-sky social-cta text-center">
+            <p>Or Contact me on Instagram</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/abigailflower_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
