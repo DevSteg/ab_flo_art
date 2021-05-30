@@ -110,8 +110,7 @@ footer {
 }
 
 .link-img {
-    height: 100%;
-    max-height: 370px;
+    height: 370px;
     width: 100%;
     border-radius: 10px;
 }
@@ -134,7 +133,7 @@ footer {
 }
 
 .insta-img {
-    height: 425px;
+    height: 370px;
     width: auto;
     margin: auto;
     border-radius: 10px;
@@ -497,6 +496,10 @@ select option[value=''],
 }
 
 @media only screen and (max-width: 767px) {
+    .link-img {
+        height: 270px;
+    }
+
     .insta-img {
         height: 250px;
         width: auto;
