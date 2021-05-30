@@ -3,10 +3,12 @@ from .models import UserProfile
 from django.contrib import messages
 from .forms import ProfileForm
 from checkout.models import Order
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
+@login_required
 def profile(request):
     """ View to display the users profile """
     user = request.user
@@ -20,7 +22,8 @@ def profile(request):
                 messages.success(request, 'Your Profile has been updated')
             else:
                 messages.success(
-                    request, 'Update profile failed, Please check the form is correct')
+                    request, 'Update profile failed, \
+                    Please check the form is correct')
         else:
             form = ProfileForm(instance=profile)
         orders = profile.orders.all()

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from .models import Product, Category
 from .forms import ProductForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -37,6 +38,7 @@ def product_info(request, product_id):
     return render(request, 'products/product_info.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
     # Only accessible to superusers
@@ -66,6 +68,7 @@ def add_product(request):
         return render(request, 'home/index.html')
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit and existing product in the store """
     # Only accessible to superusers
@@ -97,6 +100,7 @@ def edit_product(request, product_id):
         return render(request, 'home/index.html')
 
 
+@login_required
 def delete_product(request, product_id):
     """ Delete Product from the store """
     # Only accessible to superusers
