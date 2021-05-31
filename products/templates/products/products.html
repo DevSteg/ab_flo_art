@@ -12,12 +12,12 @@
 <div class="container content-block">
     <!-- Collection Dropdown List for screens smaller than 1024px -->
     <div class="row mt-3  collec-dropdown">
-        <li class="nav-item dropdown">
-            <a class="collection-title dropdown-toggle no-under text-sky" href="#" id="navbarDropdown" role="button"
+        <div class="nav-item dropdown">
+            <a class="collection-title dropdown-toggle no-under text-sky" href="#" id="collecDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Collections
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="collecDropdown">
                 <li class="nav-item">
                     <a href="{% url 'products' %}?category=dishes" class="text-sky dropdown-item no-under">Dishes</a>
                 </li>
@@ -36,7 +36,7 @@
                         class="text-sky dropdown-item no-under">Originals</a>
                 </li>
             </ul>
-        </li>
+        </div>
     </div>
     <div class="product-section">
         <!-- Collection Side List for screens larger than 1024px -->
