@@ -166,20 +166,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 mb-5 mt-5 d-flex justify-content-between">
-            <a href="{% url 'products' %}" class="back-btn col-4 text-start">
-                <span><i class="fas fa-caret-square-left"></i> Back to products</span>
-            </a>
+        <div class="col-12 mb-5 mt-5 text-end">
             {% if user.is_authenticated %}
-            <a href="{% url 'profile' %}" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
+            <a href="{% url 'profile' %}" class="btn btn-large bg-sky col-4 ms-5 checkout-btn">
                 <span>Your profile</span>
             </a>
             {% else %}
-            <a href="{% url 'index' %}" class="btn btn-large bg-sky col-3 ms-5 checkout-btn">
+            <a href="{% url 'home' %}" class="btn btn-large bg-sky col-4 ms-5 checkout-btn">
                 <span>Home</span>
             </a>
             {% endif %}
         </div>
+        <a href="{% url 'products' %}" class="back-btn col-4 mb-2 text-start">
+            <span><i class="fas fa-caret-square-left"></i> Back to products</span>
+        </a>
     </div>
 </div>
 {% endblock %}
