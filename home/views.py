@@ -39,8 +39,10 @@ def contact(request):
                 messages.error(
                     request, 'Your message could not be sent please \
                               check the form is filled out correctly')
-
             return redirect(reverse('home'))
+        else:
+            messages.error(request, 'Your message could not be sent please \
+                                    check the form is filled out correctly')
 
     form = ContactForm()
 
