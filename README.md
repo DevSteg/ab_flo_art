@@ -176,105 +176,105 @@ The database schema is below:
     * #### Navbar Testing
         - When a user is not legged in
         * Testing the Abigail Flower logo, When clicking on the logo it should take the user to the home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the shop dropdown link, When clicking on the shop dropdown link it should show the user a list of links to point go to the products page of their choice.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the About link, When clicking on the About link it should take the user to the about artist page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Login link, When clicking on the Login link it should take the user to the login page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Signup link, When clicking on the Signup link it should take the user to the register user page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Basket link, When clicking on the Basket link it should take the user to the Basket page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
 
     - When a user is logged in
         * Testing the Abigail Flower logo, When clicking on the logo it should take the user to the home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the shop dropdown link, When clicking on the shop dropdown link it should show the user a list of links to point go to the products page of their choice.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the About link, When clicking on the About link it should take the user to the about artist page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Profile link, When clicking on the Profile link it should take the user to the users profile page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Logout link, When clicking on the Logout link it should log the user out and then take the user to the Home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Basket link, When clicking on the Basket link it should take the user to the Basket page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
 
     - When site admin is logged in 
         * Testing the Abigail Flower logo, When clicking on the logo it should take the user to the home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the shop dropdown link, When clicking on the shop dropdown link it should show the user a list of links to point go to the products page of their choice.
             - The expected outcome was acheived.
         * Testing the About link, When clicking on the About link it should take the user to the about artist page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Product management link, When clicking on the product management link it should take the user to the about artist page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Profile link, When clicking on the Profile link it should take the user to the users profile page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Logout link, When clicking on the Logout link it should log the user out and then take the user to the home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Basket link, When clicking on the Basket link it should take the user to the Basket page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
 
     * #### Footer Testing
         * Testing the Contact link, When clicking on the Contact link it should take the user to the Contact page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the instagram link, When clicking on the instagram link it should take the user to the artists instagram page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Abigail Flower logo, When clicking on the logo it should take the user to the home page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
     
     - #### Home Page Testing
         * Testing the Ceramics link image, The ceramic link image should take the user to the products page filtered by all the ceramics in the store.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the Artwork link image, The artwork link image should take the user to the products page filtered by all the artwork in the store.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the image carousel, the image carousel should change in intervals and press the left and right chevrons to cycle through
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
     
     - #### About Page Testing
         * Testing the instagram link, When clicking on the instagram link it should take the user to the artists instagram page.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
     
     - #### Contact Page Testing
         * Testing the submit button with no info in the form, The form should not submit with any of the three input boxes empty.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the submit button with all input filled in correcly, the form should submit and send an email to the site owner notifying them of the customer query.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the subimt button with the form filled incorrectly, the form should not submit if any of the input boxes are filled in with the incorrect data.
-            - The expected outcome was acheived, but with no error message. This was a simple missed else statement that was fixed when found.
+            - The expected outcome was achieved, but with no error message. This was a simple missed else statement that was fixed when found.
     
     - #### Products Page Testing
         * Testing the products page collection links, The collection links should filter the products by the name specified on the link.
-            - The expected outcome was acheived
+            - The expected outcome was achieved
         * Testing the individual product links, The individual product links should take the used to the product_info page about that specific product.
-            - the expected outcome was acheived
+            - the expected outcome was achieved
 
         - When logged in as site admin.
             * Testing the edit button, The edit button only shows when logged in as admin, and will take the site admin to the edit product page for that specific product.
-                - The expected outcome was acheived
+                - The expected outcome was achieved
             * Testing the delete button, The delete button only shows when site admin is logged in, and will delete the specified product from the store.]
-                - The expected outcome was acheived
+                - The expected outcome was achieved
     
     - #### Product Info Testing
         * Testing the add to basket button, the add to basket button should add the product to the bakset and subtract 1 from the stock in the database.
-            - The expected outcome was acheived.
+            - The expected outcome was achieved.
         * Testing the quantity selector, the quantity selctor should not go above the current stock number in the database.
-            - The expected outcome was acheived
+            - The expected outcome was achieved
         * Testing the back to products button, the back to products button should take the user back to the products page.
-            - The expected outcome was acheived
+            - The expected outcome was achieved
         
     - #### Product Management , add/edit and delete product
         * Testing Product management link only shows when site admin is logged in.
-            - The expected outcome was acheived
+            - The expected outcome was achieved
         * Testing form submit when filled correctly, The form should submit and message the user that the product has been submitted to the store.
             - The expected outcome was achieved.
         * Testing the form when no input box is filled in, The form should not submit and alert the user that the form is not correctly filled in.
             - The expected outcome was achieved
         * Testing the back to products button, the back to products button should take the user back to the products page.
-            - The expected outcome was acheived
+            - The expected outcome was achieved
         
     - #### Profile Testing
         * Testing the profile form submit when everything is filled in correctly, the form should submit and a message be shown to the user profile has been updated.
@@ -290,24 +290,24 @@ The database schema is below:
         * Testing the secure checkout button, The secure checkout button should take the user to the checkout page with the current backet.
             - The expected outcome was acheived
         * Testing the back to browsing button, The button should take the user back to the products page
-            - The expected outcome was acheived
+            - The expected outcome was achieved
 
     - #### Checkout Testing 
         * Testing the form submit button, with the form filled out correctly and stripe payment input filled with test card details, 
           The order should submit, create and add order in the system and call the checkout success template with the order summary in and a confirmation email sent to the customer.
             - The expected outcome was achieved
         * Testing the checkout form as an AnonymousUser, The form should submit, create and add the order to the database, and send a confirmation email to the user email.
-            - The expected outcome was acheieved
+            - The expected outcome was achieved
         * Testing the stripe webhook handler by sending test webhooks from the stripe dashboard. 
             - The webhook handler is listening and responding correctly to strip.com.
         * Testing submitting the checkout form and breaking the checkout by closing it down, the stripe webhook handler should take over and create then submit the order into the database.
             - The expected outcome was achieved, the order does go to the database and a confirmation email is sent.
         * Testing the edit basket button, The edit basket button should take the user back to their basket to edit it.
-            - The expected outcome was acheieved
+            - The expected outcome was achieved
     
     - #### Responsive Testing
         * The site should be responsive across a number of devices.
-            - The expected outcome was acheieved
+            - The expected outcome was achieved
 
 - ### Device/Browser Testing
     + Chrome
