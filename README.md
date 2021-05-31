@@ -294,8 +294,10 @@ The database schema is below:
 
     - #### Checkout Testing 
         * Testing the form submit button, with the form filled out correctly and stripe payment input filled with test card details, 
-          The order should submit, create and a order in the system and call the checkout success template with the order summary in and a confirmation email sent to the customer.
+          The order should submit, create and add order in the system and call the checkout success template with the order summary in and a confirmation email sent to the customer.
             - The expected outcome was achieved
+        * Testing the checkout form as an AnonymousUser, The form should submit, create and add the order to the database, and send a confirmation email to the user email.
+            - The expected outcome was acheieved
         * Testing the stripe webhook handler by sending test webhooks from the stripe dashboard. 
             - The webhook handler is listening and responding correctly to strip.com.
         * Testing submitting the checkout form and breaking the checkout by closing it down, the stripe webhook handler should take over and create then submit the order into the database.
