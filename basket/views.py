@@ -21,6 +21,8 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
+        # Used Django documentation to find out how
+        # to update a iterger field in the database.
         product.stock = F('stock') - quantity
         product.save()
         messages.success(
@@ -45,6 +47,8 @@ def remove_item(request, item_id):
 
     if basket[item_id] > 1:
         basket[item_id] -= 1
+        # Used Django documentation to find out how
+        # to update a iterger field in the database.
         product.stock = F('stock') + 1
         product.save()
         messages.success(
@@ -52,6 +56,8 @@ def remove_item(request, item_id):
             f"Updated {product.name} quantity to {basket[item_id]} in basket!")
     else:
         basket.pop(item_id)
+        # Used Django documentation to find out how
+        # to update a iterger field in the database.
         product.stock = F('stock') + 1
         product.save()
         messages.success(request, f"Removed {product.name} from your basket!")

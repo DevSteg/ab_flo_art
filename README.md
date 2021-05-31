@@ -429,7 +429,3 @@ The database schema is below:
 * My Mentor for helpful feedback throughout the project and working calls around my current work schedule.
 * My partner for helping me test the project on her devices.
 * My younger sister (The Artist) for letting me use her work for the store.
-
-
-https://docs.djangoproject.com/en/3.2/ref/models/expressions/
-

@@ -63,10 +63,13 @@ class StripeWH_Handler:
             if save_info:
                 profile.default_full_name_ = shipping_details.name,
                 profile.default_phone_number = shipping_details.phone,
-                profile.default_street_address1 = shipping_details.address.line1,
-                profile.default_street_address2 = shipping_details.address.line2,
+                profile.default_street_address1 = (
+                    shipping_details.address.line1),
+                profile.default_street_address2 = (
+                    shipping_details.address.line2),
                 profile.default_town_city = shipping_details.address.city,
-                profile.default_postcode = shipping_details.address.postal_code,
+                profile.default_postcode = (
+                    shipping_details.address.postal_code),
                 profile.default_county = shipping_details.address.state,
                 profile.default_country = shipping_details.address.country,
                 profile.save()

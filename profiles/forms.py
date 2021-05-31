@@ -3,9 +3,9 @@ from .models import UserProfile
 
 
 class ProfileForm(forms.ModelForm):
-    """ 
-        Form for updating default 
-        delivery address on profile page 
+    """
+        Form for updating default
+        delivery address on profile page
     """
     class Meta:
         model = UserProfile
