@@ -279,7 +279,7 @@ The database schema is below:
     - #### Profile Testing
         * Testing the profile form submit when everything is filled in correctly, the form should submit and a message be shown to the user profile has been updated.
             - The expected outcome was achieved
-        * Testing the profile form submit when no input box has been filled out, the form should not submit and a message should be shown to the user to check the form.
+        * Testing the profile form submit when no input box has been filled out, the form should still submit and a message should be shown to the user to say the profile has been updated, then the profile info should be empty.
             - The expected outcome was achieved
         * Testing order history link on order number, the link should take the user to that specific order summary and display a message showing that it is an old summary.
             - The expected outcome was achieved
